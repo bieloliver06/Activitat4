@@ -4,20 +4,20 @@
     {
         static void Main()
         {
-            string? input_edat;
+            string? input_age;
             string? input_ingressos;
-            int edat;
+            int age;
             decimal ingressos;
 
             while (true)
             {
                 Console.WriteLine("Introdueix la teva edat : ");
-                input_edat = Console.ReadLine();
-                if (input_edat != null)
+                input_age = Console.ReadLine();
+                if (input_age != null)
                 {
                     try
                     {
-                        edat = int.Parse(input_edat);
+                        age = int.Parse(input_age);
                         break;
                     }
                     catch (System.FormatException)
@@ -43,7 +43,7 @@
                     }
                 }
             }
-            if (edat >= 16 && ingressos >= 1000)
+            if (age >= 16 && ingressos >= 1000)
             {
                 Console.WriteLine("Has de tributar");
             }
