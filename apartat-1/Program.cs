@@ -1,6 +1,4 @@
-﻿using DotNetEnv;
-
-namespace Apartat1
+﻿namespace Apartat1
 {
     class Program
     {
