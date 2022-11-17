@@ -4,20 +4,19 @@
     {
         static void Main()
         {
-            string? input_num1;
-            string? input_num2;
+            string? input_num;
             int num1;
             int num2;
 
             while (true)
             {
                 Console.WriteLine("Introdueix el primer nombre : ");
-                input_num1 = Console.ReadLine();
-                if (input_num1 != null)
+                input_num = Console.ReadLine();
+                if (input_num != null)
                 {
                     try
                     {
-                        num1 = int.Parse(input_num1);
+                        num1 = int.Parse(input_num);
                         break;
                     }
                     catch (System.FormatException)
@@ -29,12 +28,12 @@
             while (true)
             {
                 Console.WriteLine("Introdueix el segon nombre : ");
-                input_num2 = Console.ReadLine();
-                if (input_num2 != null)
+                input_num = Console.ReadLine();
+                if (input_num != null)
                 {
                     try
                     {
-                        num2 = int.Parse(input_num2);
+                        num2 = int.Parse(input_num);
                         if (num2 != 0) break;
                         else Console.WriteLine("0 no és un nombre valid.");
                     }
