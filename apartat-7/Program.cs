@@ -10,23 +10,29 @@
             {
                 Console.WriteLine("Vols la pizza vegetariana? (Y/N)");
                 input_class = Console.ReadLine();
-                if (input_class == null)
+                if (input_class != null)
                 {
-                    Console.WriteLine("El que has introduit no és valid");
-                }
-                else if (input_class.Trim().ToLower()[0] == 'y')
-                {
-                    b_class = true;
-                    break;
-                }
-                else if (input_class.Trim().ToLower()[0] == 'n')
-                {
-                    b_class = false;
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("El que has introduit no és valid...");
+                    try
+                    {
+                        if (input_class.Trim().ToLower()[0] == 'y')
+                        {
+                            b_class = true;
+                            break;
+                        }
+                        else if (input_class.Trim().ToLower()[0] == 'n')
+                        {
+                            b_class = false;
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("El que has introduit no és valid...");
+                        }
+                    }
+                    catch (System.IndexOutOfRangeException)
+                    {
+                        Console.WriteLine("El que has introduit no és valid...");
+                    }
                 }
             }
             if (b_class == true)
